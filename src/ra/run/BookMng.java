@@ -38,6 +38,7 @@ public class BookMng {
 
     public void updateBook(Scanner sc) {
         System.out.println("Hãy nhập id sách cần sửa");
+        sc.nextLine();
         int id = sc.nextInt();
         int indexById = findIndexById(id);
         if (indexById != -1) {
@@ -46,6 +47,7 @@ public class BookMng {
             System.out.println(books[indexById]);
           books[indexById].inputData(sc);
             System.out.println("Cập nhật thành công");
+            sc.nextLine();
         } else {
             System.err.println("không tìm thấy id sách");
         }
@@ -86,6 +88,7 @@ public class BookMng {
             }
             books=newBook;
             System.out.println("Xoá thành công");
+            sc.nextLine();
         } else {
             System.err.println("không tìm thấy id sách");
         }

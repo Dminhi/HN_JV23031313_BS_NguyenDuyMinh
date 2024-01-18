@@ -91,8 +91,10 @@ public class Book {
     }
 
     public void inputData(Scanner sc) {
+        if (bookId==0){
         System.out.println("Hãy nhập Id Sách");
-        this.bookId = Integer.parseInt(sc.nextLine());
+        this.bookId = Integer.parseInt(sc.nextLine());}
+        sc.nextLine();
         System.out.println("Hãy nhập tên sách ");
         this.bookName = sc.nextLine();
         System.out.println("Hãy nhập tên tác giả ");
